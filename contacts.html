@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакти - зв'яжіться з нами для питань та пропозицій">
+    <title>Контакти - Українська традиція</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Логотип Українська традиція">
+                <span class="logo-text">Українська традиція</span>
+            </div>
+            <button class="menu-toggle" aria-label="Відкрити меню">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="recipes.html">Рецепти</a></li>
+                    <li><a href="about.html">Про проект</a></li>
+                    <li><a href="contacts.html" class="active">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Контакти</h1>
+            <p>Зв'яжіться з нами для питань, пропозицій або просто щоб поділитися своїми враженнями</p>
+        </section>
+
+        <section class="recipe-section">
+            <h2>Напишіть нам</h2>
+            <p>Маєте питання? Хочете поділитися своїм родинним рецептом? Або просто хочете подякувати за проект? Ми завжди раді почути від вас!</p>
+            <p>Заповніть форму нижче, і ми зв'яжемося з вами якомога швидше.</p>
+
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Ім'я <span style="color: var(--color-red);">*</span></label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="Введіть ваше ім'я"
+                    >
+                    <span class="error-message">Будь ласка, введіть ваше ім'я</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span style="color: var(--color-red);">*</span></label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="example@example.com"
+                    >
+                    <span class="error-message">Будь ласка, введіть коректну email адресу</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="+380 XX XXX XX XX"
+                    >
+                    <span class="error-message">Будь ласка, введіть коректний номер телефону</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Тема звернення <span style="color: var(--color-red);">*</span></label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Оберіть тему...</option>
+                        <option value="recipe">Пропозиція рецепту</option>
+                        <option value="question">Запитання про рецепт</option>
+                        <option value="feedback">Відгук про проект</option>
+                        <option value="error">Повідомлення про помилку</option>
+                        <option value="cooperation">Співпраця</option>
+                        <option value="other">Інше</option>
+                    </select>
+                    <span class="error-message">Будь ласка, оберіть тему звернення</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Повідомлення <span style="color: var(--color-red);">*</span></label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                        placeholder="Напишіть ваше повідомлення тут..."
+                    ></textarea>
+                    <span class="error-message">Будь ласка, введіть ваше повідомлення (мінімум 10 символів)</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Надіслати повідомлення</button>
+            </form>
+
+            <div id="formSuccess" style="display: none; margin-top: 2rem; padding: 1.5rem; background-color: #d4edda; border: 2px solid #28a745; border-radius: 8px; text-align: center;">
+                <h3 style="color: #28a745; margin-bottom: 0.5rem;">Дякуємо за ваше повідомлення!</h3>
+                <p style="margin-bottom: 0;">Ми зв'яжемося з вами найближчим часом.</p>
+            </div>
+        </section>
+
+        <section class="recipe-section">
+            <h2>Контактна інформація</h2>
+            <div class="recipe-info">
+                <div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:contact@ukr-traditsia.ua">contact@ukr-traditsia.ua</a></p>
+                </div>
+                <div>
+                    <h3>Телефон</h3>
+                    <p><a href="tel:+380442345678">+380 44 234 56 78</a></p>
+                </div>
+                <div>
+                    <h3>Години роботи</h3>
+                    <p>Пн-Пт: 9:00 - 18:00</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe-section">
+            <h2>Про автора проекту</h2>
+            <p><strong>Виконавець:</strong> Стопень Ірина Валеріївна</p>
+            <p><strong>Група:</strong> КА-34</p>
+            <p><strong>Навчальний заклад:</strong> Національний технічний університет України "Київський політехнічний інститут імені Ігоря Сікорського"</p>
+            <p><strong>Інститут:</strong> Інститут прикладного системного аналізу</p>
+            <p><strong>Кафедра:</strong> Математичних методів системного аналізу</p>
+            <p><strong>Дисципліна:</strong> Веб-орієнтована розробка програмного забезпечення</p>
+        </section>
+
+        <section class="recipe-section">
+            <h2>Часті запитання</h2>
+            <h3>Як я можу запропонувати свій рецепт?</h3>
+            <p>Ми завжди раді новим традиційним рецептам! Напишіть нам через форму зворотного зв'язку, обравши тему "Пропозиція рецепту", та опишіть вашу страву.</p>
+
+            <h3>Чи можна використовувати рецепти з сайту в комерційних цілях?</h3>
+            <p>Всі рецепти на сайті є традиційними українськими стравами і можуть вільно використовуватися для приготування вдома або в ресторанах.</p>
+
+            <h3>Як часто додаються нові рецепти?</h3>
+            <p>Ми регулярно додаємо нові автентичні рецепти української кухні. Слідкуйте за оновленнями на головній сторінці!</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Українська традиція. Всі права захищені.</p>
+            <p>Виконала: Стопень Ірина Валеріївна, група КА-34</p>
+            <p><a href="contacts.html">Зв'язатися з нами</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
