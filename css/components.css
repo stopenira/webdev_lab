@@ -135,17 +135,23 @@
 
 .btn-primary:hover {
     background-color: #6d3410;
+    color: white;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
     background-color: var(--color-yellow);
-    color: var(--color-brown);
+    color: var(--color-white)!important;
 }
 
 .btn-secondary:hover {
     background-color: #e6ac00;
+    color: var(--color-white);
     transform: translateY(-2px);
+}
+
+.about-preview .btn {
+    margin-right: 1rem;
 }
 
 /* 
@@ -211,7 +217,7 @@ textarea {
     display: block;
 }
 
-/* 
+/*
    CATEGORY LISTS
 */
 
@@ -219,13 +225,124 @@ textarea {
     padding-left: 1rem;
 }
 
-/* 
+/*
+   DYNAMIC CONTENT
+*/
+
+.dynamic-info {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+body.dark-theme .dynamic-info {
+    background-color: #2a2a2a;
+}
+
+/*
+   THEME SWITCHER
+*/
+
+.theme-switcher-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    border: 2px solid var(--color-brown);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-switcher-container label {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-brown);
+    cursor: pointer;
+}
+
+.theme-switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-yellow);
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--color-white);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--color-brown);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/*
+   NAV HIGHLIGHT
+*/
+
+nav a.nav-highlight {
+    background-color: var(--color-yellow);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: var(--color-white);
+}
+
+nav a.nav-highlight:hover {
+    color: var(--color-white);
+}
+
+/*
    RESPONSIVE COMPONENTS
 */
 
 @media (max-width: 768px) {
     .hero {
         padding: 2rem 1rem;
+    }
+
+    .theme-switcher-container {
+        bottom: 10px;
+        left: 10px;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .theme-switcher-container label {
+        font-size: 0.8rem;
     }
 }
 

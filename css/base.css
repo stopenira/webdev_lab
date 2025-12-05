@@ -109,7 +109,106 @@ ol {
     margin-top: 2rem;
 }
 
-/* 
+/*
+   DARK THEME
+*/
+
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+    color: #FFC107;
+}
+
+body.dark-theme a {
+    color: #FFD54F;
+}
+
+body.dark-theme a:hover {
+    color: #FFC107;
+}
+
+body.dark-theme .hero {
+    background-color: #2a2a2a;
+    border-color: #FFC107;
+}
+
+body.dark-theme .hero p {
+    color: #b0b0b0;
+}
+
+body.dark-theme .recipe-card {
+    background-color: #2a2a2a;
+    border-color: #FFC107;
+}
+
+body.dark-theme .recipe-card:hover {
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+body.dark-theme .recipe-section {
+    background-color: #2a2a2a;
+    border-color: #FFC107;
+}
+
+body.dark-theme .recipe-meta {
+    color: #b0b0b0;
+}
+
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme input[type="tel"],
+body.dark-theme textarea,
+body.dark-theme select {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-color: #FFC107;
+}
+
+body.dark-theme label {
+    color: #FFC107;
+}
+
+body.dark-theme .theme-switcher-container {
+    background-color: #2a2a2a;
+    border-color: #FFC107;
+}
+
+body.dark-theme .theme-switcher-container label {
+    color: #FFC107;
+}
+
+body.dark-theme nav a.nav-highlight {
+    background-color: #8B4513;
+    color: var(--color-white);
+}
+
+body.dark-theme footer {
+    background-color: #2a2a2a;
+    border-top: 2px solid #FFC107;
+}
+
+body.dark-theme .recipe-image {
+    border-color: #FFC107;
+}
+
+body.dark-theme header {
+    background-color: #2a2a2a;
+    border-bottom: 2px solid #FFC107;
+}
+
+body.dark-theme .logo-text {
+    color: #FFC107;
+}
+
+/*
    RESPONSIVE TYPOGRAPHY
 */
 
