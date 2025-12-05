@@ -92,8 +92,8 @@ function initAccordion() {
             toggleButton.className = 'btn btn-secondary';
             toggleButton.style.lineHeight = '1.6';
 
-            aboutSection.insertBefore(toggleButton, aboutSection.querySelector('.btn'));
-            aboutSection.insertBefore(hiddenContent, aboutSection.querySelector('.btn'));
+            aboutSection.insertBefore(toggleButton, aboutSection.querySelector('div'));
+            aboutSection.insertBefore(hiddenContent, aboutSection.querySelector('div'));
 
             toggleButton.addEventListener('click', function() {
                 if (hiddenContent.style.display === 'none') {
